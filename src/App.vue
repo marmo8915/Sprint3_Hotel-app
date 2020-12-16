@@ -2,19 +2,12 @@
   <div id="app">
     <div class="header">
 
-      <v-toolbar>
-        <v-toolbar-title>Vuetify</v-toolbar-title>
-      </v-toolbar>
-
-
-
-
       <h1>Season Hotels</h1>
       <nav>
-        <button v-on:click="init" v-if="is_auth">Home</button>
+        <button v-on:click="getUser" v-if="is_auth">Home</button>
         <button v-on:click="getHabitacion" v-if="is_auth">Registro</button>
         <button v-on:click="init" v-if="is_auth">Consultar</button>
-        <button v-on:click="getUser" v-if="is_auth">Autenticar</button>
+        <button v-on:click="getHabitacion" v-if="is_auth">Autenticar</button>
         <button v-on:click="getHabitacion" v-if="is_auth">Cerrar Sesión</button>
 
       </nav>
@@ -126,7 +119,7 @@ body {
   border: 1px solid #e5e7e9;
 }
 .main-component {
-  height: 75vh;
+  height: 78.7vh;
   margin: 0%;
   padding: 0%;
   background: #fdfefe;
@@ -136,7 +129,7 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 10vh;
+  height: 8vh;
   min-height: 100px;
   background-color: #db7f16;
   background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
