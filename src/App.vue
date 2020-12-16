@@ -6,9 +6,6 @@
         <v-toolbar-title>Vuetify</v-toolbar-title>
       </v-toolbar>
 
-
-
-
       <h1>Season Hotels</h1>
       <nav>
         <button v-on:click="init" v-if="is_auth">Home</button>
