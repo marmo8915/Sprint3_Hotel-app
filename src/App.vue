@@ -5,11 +5,10 @@
       <h1>Season Hotels</h1>
       <nav>
         <button v-on:click="getUser" v-if="is_auth">Home</button>
-        <button v-on:click="getHabitacion" v-if="is_auth">Registro</button>
+        <button v-on:click="getUserRegistro" v-if="is_auth">Registro</button>
         <button v-on:click="init" v-if="is_auth">Consultar</button>
         <button v-on:click="getHabitacion" v-if="is_auth">Autenticar</button>
         <button v-on:click="getHabitacion" v-if="is_auth">Cerrar Sesión</button>
-
       </nav>
     </div>
     <div class="main-component">
@@ -47,6 +46,12 @@ export default {
       }
     },
 
+    getUserRegistro: function(){
+      if(this.$route.name != "user_registro"){
+        let username = localStorage.getItem("current_username")
+        this.$router.push({name: "user_registro", params:{username:username}})
+      }
+    },
 
     getHabitacion: function(){
       if(this.$route.name != "habitacion_Lorena"){
