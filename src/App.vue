@@ -1,21 +1,16 @@
 <template>
   <div id="app">
     <div class="header">
-
-<<<<<<< HEAD
       <v-toolbar>
         <v-toolbar-title>Vuetify</v-toolbar-title>
       </v-toolbar>
-
-=======
->>>>>>> 669a7c5ec06103768dcf7e643b503a297bee711c
       <h1>Season Hotels</h1>
       <nav>
-        <button v-on:click="getUser" v-if="is_auth">Home</button>
-        <button v-on:click="getHabitacion" v-if="is_auth">Registro</button>
-        <button v-on:click="init" v-if="is_auth">Consultar</button>
-        <button v-on:click="getHabitacion" v-if="is_auth">Autenticar</button>
-        <button v-on:click="getHabitacion" v-if="is_auth">Cerrar Sesión</button>
+        <button v-on:click="init" v-if="is_auth">Home</button>
+        <button v-on:click="getUser" v-if="is_auth">Login</button>
+        <button v-on:click="getRegistro" v-if="is_auth">Registro</button>
+        <button v-on:click="getRoom" v-if="is_auth">Habitación</button>
+        <button v-if="is_auth">Cerrar Sesión</button>
 
       </nav>
     </div>
@@ -54,30 +49,27 @@ export default {
       }
     },
 
-
-    getHabitacion: function(){
-      if(this.$route.name != "habitacion_Lorena"){
+    getRegistro: function(){
+      if(this.$route.name != "user_registro"){
         let username = localStorage.getItem("current_username")
-        this.$router.push({ name:"habitacion_Lorena",
-                params:{username:username}})
+        this.$router.push({ name:"user_registro", params:{username:username}})
       }
     },
 
-
-    getBalance: function(){
-      if(this.$route.name != "user_balance"){
+    getRoom: function(){
+      if(this.$route.name != "tipo_room"){
         let username = localStorage.getItem("current_username")
-        this.$router.push({ name:"user_balance",
-                params:{username:username}})
+        this.$router.push({ name:"tipo_room", params:{username:username}})
       }
-    },
-  },
-    beforeCreate: function(){
-      localStorage.setItem('current_username', 'Lorena')
-      localStorage.setItem('isAuth', true)
-      this.$router.push({name:"user",params:{username:'Lorena'}})
     }
-  }
+  },
+
+    beforeCreate: function(){
+      localStorage.setItem('current_username', 'janruva')
+      localStorage.setItem('isAuth', true)
+      this.$router.push({name:"user",params:{username:'janruva'}})
+    },
+  };
 </script>
 
 <style>

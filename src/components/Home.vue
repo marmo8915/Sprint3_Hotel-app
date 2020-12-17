@@ -1,33 +1,17 @@
 <template>
-  <div id="home">
-    <h2>{{ username }}</h2>
+  <div id="Home">
     <h2>
-      Tu habitación es: <span> {{ username }} COP </span>
+      <span>Bienvenido a Nuestro Season Hotels</span>
     </h2>
   </div>
 </template>
 
 <script>
-import axios from "axios";
-export default {
-  name: "Home",
 
-  created: function () {
-    this.message=this.$route.params.message;
-    let self = this;
-    axios.get("http://127.0.0.1:8000/home/")
-      .then((result) => {
-        self.balance = result.data.balance;
-      })
-      .catch((error) => {
-        alert("ERROR Servidor");
-      });
-  },
-};
 </script>
 
 <style>
-#home {
+#Home {
   width: 100%;
   height: 100%;
   display: flex;
@@ -35,11 +19,11 @@ export default {
   justify-content: center;
   align-items: center;
 }
-#home h2 {
+#Home h2 {
   font-size: 50px;
   color: #283747;
 }
-#home span {
+#Home span {
   color: crimson;
   font-weight: bold;
 }

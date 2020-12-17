@@ -2,7 +2,6 @@ import vueRouter from 'vue-router'
 import User from './components/User'
 import Home from './components/Home'
 import UserRegistro from './components/UserRegistro'
-import UserHabitacion from './components/UserHabitacion'
 import TipoRoom from './components/TipoRoom'
 import App from './App'
 
@@ -34,13 +33,7 @@ const router = new vueRouter({
     },    
 
     {
-        path: '/user/auth',
-        name: "user_habitacion",
-        component: UserHabitacion
-    },
-
-    {
-        path: '/room/:tipo_room',
+        path: '/room/Superior',
         name: "tipo_room",
         component: TipoRoom
     },
