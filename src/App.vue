@@ -6,20 +6,12 @@
       </v-toolbar>
       <h1>Season Hotels</h1>
       <nav>
-<<<<<<< HEAD
         <button v-on:click="init" v-if="is_auth">Home</button>
         <button v-on:click="getUser" v-if="is_auth">Login</button>
         <button v-on:click="getRegistro" v-if="is_auth">Registro</button>
         <button v-on:click="getRoom" v-if="is_auth">Habitación</button>
         <button v-if="is_auth">Cerrar Sesión</button>
 
-=======
-        <button v-on:click="getUser" v-if="is_auth">Home</button>
-        <button v-on:click="getUserRegistro" v-if="is_auth">Registro</button>
-        <button v-on:click="init" v-if="is_auth">Consultar</button>
-        <button v-on:click="getHabitacion" v-if="is_auth">Autenticar</button>
-        <button v-on:click="getHabitacion" v-if="is_auth">Cerrar Sesión</button>
->>>>>>> 445a3fc985b7fe7245231e9e0668ce0878cacb01
       </nav>
     </div>
     <div class="main-component">
@@ -57,20 +49,8 @@ export default {
       }
     },
 
-<<<<<<< HEAD
     getRegistro: function(){
       if(this.$route.name != "user_registro"){
-=======
-    getUserRegistro: function(){
-      if(this.$route.name != "user_registro"){
-        let username = localStorage.getItem("current_username")
-        this.$router.push({name: "user_registro", params:{username:username}})
-      }
-    },
-
-    getHabitacion: function(){
-      if(this.$route.name != "habitacion_Lorena"){
->>>>>>> 445a3fc985b7fe7245231e9e0668ce0878cacb01
         let username = localStorage.getItem("current_username")
         this.$router.push({ name:"user_registro", params:{username:username}})
       }
