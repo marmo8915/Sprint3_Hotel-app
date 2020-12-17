@@ -49,7 +49,7 @@ export default {
 
 .imagen {
   display: flex;
-  height: 65vh;
+  height: 71vh;
   align-content: center;
   margin: 0%;
   padding: 0%;
@@ -64,7 +64,7 @@ export default {
   color: #283747;
 }
 #User span {
-  color: crimson;
+  color: rgb(23, 20, 220);
   font-weight: bold;
 }
 </style>
