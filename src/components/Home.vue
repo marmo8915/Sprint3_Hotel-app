@@ -94,8 +94,9 @@ ul.slider li {
 
 ul.slider li img{
   width: 100%;
-  height: 550px;
+  height: auto;
   object-fit: cover;
+  object-position: center center;
 }
 
 ul.slider li:first-child {
