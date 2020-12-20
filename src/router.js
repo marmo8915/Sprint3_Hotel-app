@@ -37,11 +37,13 @@ const router = new vueRouter({
         name: "tipo_room",
         component: TipoRoom
     },
+
     {
         path: '/temporada/room',
         name: "temporada",
         component: Temporada
     },
+    
     ]
     })
     export default router
