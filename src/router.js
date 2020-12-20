@@ -10,7 +10,7 @@ const router = new vueRouter({
     base: __dirname,
     routes: [
     {
-    path: '/home',
+    path: '/',
     name: "home",
     component: App
     },
