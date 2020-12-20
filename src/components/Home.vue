@@ -77,8 +77,8 @@ ul.slider{
   position: relative;
   
   margin: auto;
-  width: 900px;
-  height: 550px;
+  width: 100%;
+  height: auto;
 }
 
 ul.slider li {
