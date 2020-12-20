@@ -10,7 +10,7 @@ const router = new vueRouter({
     base: __dirname,
     routes: [
     {
-    path: '/',
+    path: '/home',
     name: "home",
     component: App
     },
@@ -36,6 +36,11 @@ const router = new vueRouter({
         path: '/room/Superior',
         name: "tipo_room",
         component: TipoRoom
+    },
+    {
+        path: '/temporada/room',
+        name: "temporada",
+        component: Temporada
     },
     ]
     })
